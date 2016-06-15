@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Tabletojson by LeandroFranciscato</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Tabletojson</h1>
+      <h2 class="project-tagline">This one is a simple JS script that will help you to transform table tag&#39;s on JSON objects.</h2>
+      <a href="https://github.com/LeandroFranciscato/tableToJSON" class="btn">View on GitHub</a>
+      <a href="https://github.com/LeandroFranciscato/tableToJSON/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/LeandroFranciscato/tableToJSON/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h2>
+<a id="tabletojson" class="anchor" href="#tabletojson" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>tableToJSON</h2>
+
+<p>This one is a simple JS script that will help you to transform <code>table</code> tag's on JSON objects.</p>
+
+<h3>
+<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dependencies</h3>
+
+<p><a href="https://github.com/jquery/jquery">jquery</a> is necessary to work with the DOM.</p>
+
+<h3>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install</h3>
+
+<p>install with bower (or download it), <code>bower install tableToJSON</code> and so just include the <strong>tableToJSON.min.js</strong> in your HTML page.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>bin/tableToJSON.min.js<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<h3>
+<a id="use" class="anchor" href="#use" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Use</h3>
+
+<p>Consider this <code>table</code>:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">table</span>&gt;
+    &lt;<span class="pl-ent">tr</span>&gt;
+        &lt;<span class="pl-ent">th</span>&gt;Header 01&lt;/<span class="pl-ent">th</span>&gt;
+        &lt;<span class="pl-ent">th</span>&gt;Header 02&lt;/<span class="pl-ent">th</span>&gt;
+        &lt;<span class="pl-ent">th</span>&gt;Header 03&lt;/<span class="pl-ent">th</span>&gt;
+        &lt;<span class="pl-ent">th</span>&gt;Header 04&lt;/<span class="pl-ent">th</span>&gt;
+    &lt;/<span class="pl-ent">tr</span>&gt;
+    &lt;<span class="pl-ent">tr</span>&gt;
+        &lt;<span class="pl-ent">td</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>coluna01<span class="pl-pds">"</span></span>&gt;valor 01&lt;/<span class="pl-ent">td</span>&gt; 
+        &lt;<span class="pl-ent">td</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>coluna02<span class="pl-pds">"</span></span>&gt;valor 02&lt;/<span class="pl-ent">td</span>&gt;
+        &lt;<span class="pl-ent">td</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>coluna03<span class="pl-pds">"</span></span>&gt;valor 03&lt;/<span class="pl-ent">td</span>&gt;
+        &lt;<span class="pl-ent">td</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>coluna04<span class="pl-pds">"</span></span>&gt;valor 04&lt;/<span class="pl-ent">td</span>&gt;
+    &lt;/<span class="pl-ent">tr</span>&gt;
+    &lt;<span class="pl-ent">tr</span>&gt;
+        &lt;<span class="pl-ent">td</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>coluna01<span class="pl-pds">"</span></span>&gt;valor 05&lt;/<span class="pl-ent">td</span>&gt; 
+        &lt;<span class="pl-ent">td</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>coluna02<span class="pl-pds">"</span></span>&gt;valor 06&lt;/<span class="pl-ent">td</span>&gt;
+        &lt;<span class="pl-ent">td</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>coluna03<span class="pl-pds">"</span></span>&gt;valor 07&lt;/<span class="pl-ent">td</span>&gt;
+        &lt;<span class="pl-ent">td</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>coluna04<span class="pl-pds">"</span></span>&gt;valor 08&lt;/<span class="pl-ent">td</span>&gt;
+    &lt;/<span class="pl-ent">tr</span>&gt;
+    &lt;<span class="pl-ent">tr</span>&gt;
+        &lt;<span class="pl-ent">td</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>coluna01<span class="pl-pds">"</span></span>&gt;valor 09&lt;/<span class="pl-ent">td</span>&gt; 
+        &lt;<span class="pl-ent">td</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>coluna02<span class="pl-pds">"</span></span>&gt;valor 10&lt;/<span class="pl-ent">td</span>&gt;
+        &lt;<span class="pl-ent">td</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>coluna03<span class="pl-pds">"</span></span>&gt;valor 11&lt;/<span class="pl-ent">td</span>&gt;
+        &lt;<span class="pl-ent">td</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>coluna04<span class="pl-pds">"</span></span>&gt;valor 12&lt;/<span class="pl-ent">td</span>&gt;
+    &lt;/<span class="pl-ent">tr</span>&gt;
+    &lt;<span class="pl-ent">tr</span>&gt;
+        &lt;<span class="pl-ent">td</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>coluna01<span class="pl-pds">"</span></span>&gt;valor 13&lt;/<span class="pl-ent">td</span>&gt; 
+        &lt;<span class="pl-ent">td</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>coluna02<span class="pl-pds">"</span></span>&gt;valor 14&lt;/<span class="pl-ent">td</span>&gt;
+        &lt;<span class="pl-ent">td</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>coluna03<span class="pl-pds">"</span></span>&gt;valor 15&lt;/<span class="pl-ent">td</span>&gt;
+        &lt;<span class="pl-ent">td</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>coluna04<span class="pl-pds">"</span></span>&gt;valor 16&lt;/<span class="pl-ent">td</span>&gt;
+    &lt;/<span class="pl-ent">tr</span>&gt;
+&lt;/<span class="pl-ent">table</span>&gt;</pre></div>
+
+<p>And get yours <code>&lt;td&gt;</code> with this simple js:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> data <span class="pl-k">=</span> <span class="pl-en">tableToJSON</span>(<span class="pl-s"><span class="pl-pds">"</span>table<span class="pl-pds">"</span></span>);</pre></div>
+
+<p>The output should look like that:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-s"><span class="pl-pds">"</span>data<span class="pl-pds">"</span></span><span class="pl-k">:</span>[
+   {<span class="pl-s"><span class="pl-pds">"</span>coluna01<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>valor 01<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>coluna02<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>valor 02<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>coluna03<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>valor 03<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>coluna04<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>valor 04<span class="pl-pds">"</span></span>},
+   {<span class="pl-s"><span class="pl-pds">"</span>coluna01<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>valor 05<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>coluna02<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>valor 06<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>coluna03<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>valor 07<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>coluna04<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>valor 08<span class="pl-pds">"</span></span>},
+   {<span class="pl-s"><span class="pl-pds">"</span>coluna01<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>valor 09<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>coluna02<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>valor 10<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>coluna03<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>valor 11<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>coluna04<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>valor 12<span class="pl-pds">"</span></span>},
+   {<span class="pl-s"><span class="pl-pds">"</span>coluna01<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>valor 13<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>coluna02<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>valor 14<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>coluna03<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>valor 15<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>coluna04<span class="pl-pds">"</span></span><span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">"</span>valor 16<span class="pl-pds">"</span></span>}
+] </pre></div>
+
+<h3>
+<a id="known-issues" class="anchor" href="#known-issues" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>known issues</h3>
+
+<ul>
+<li>Always use the tag <code>name</code> in yours <code>&lt;td&gt;</code>.</li>
+<li>The Header <code>&lt;th&gt;</code> is not parsed to JSON.</li>
+</ul>
+
+<h3>
+<a id="authors" class="anchor" href="#authors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors</h3>
+
+<ul>
+<li>
+<strong>Leandro Franciscato</strong> - <a href="https://github.com/LeandroFranciscato">Acess my git Page</a>
+</li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/LeandroFranciscato/tableToJSON">Tabletojson</a> is maintained by <a href="https://github.com/LeandroFranciscato">LeandroFranciscato</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
