@@ -1,4 +1,4 @@
-# tableToJSON
+## tableToJSON
 
 This one is a simple JS script that will help you to transform ````table```` tag's on JSON objects.
 
@@ -13,9 +13,10 @@ install with bower (or download it), ````bower install tableToJSON```` and so ju
 <script src="bin/tableToJSON.min.js" type="text/javascript"></script>
 ````
 
-## Use
+### Use
 
 Consider this ````table````:
+
 ````html
 <table>
     <tr>
@@ -64,7 +65,10 @@ The output should look like that:
    {"coluna01":"valor 13","coluna02":"valor 14","coluna03":"valor 15","coluna04":"valor 16"}
 ] 
 ````
+### known issues
 
-## Authors
+Suggest to always user the tag ````name```` in yours ````<td>````.
+
+### Authors
 
 * **Leandro Franciscato** - [Acess my git Page](https://github.com/LeandroFranciscato)
