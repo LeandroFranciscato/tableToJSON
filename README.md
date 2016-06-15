@@ -67,7 +67,8 @@ The output should look like that:
 ````
 ### known issues
 
-Suggest to always user the tag ````name```` in yours ````<td>````.
+- Always use the tag ````name```` in yours ````<td>````.
+- The Header ````<th>```` is not parsed to JSON.
 
 ### Authors
 
