@@ -9,6 +9,9 @@ This one is a simple JS script that will help you to transform ````table```` tag
 ### Install
 
 install with bower (or download it), ````bower install tableToJSON```` and so just include the **tableToJSON.min.js** in your HTML page.
+````html
+<script src="bin/tableToJSON.min.js" type="text/javascript"></script>
+````
 
 ## Use
 
