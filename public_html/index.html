@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Header 01</th>
+                <th>Header 02</th>
+                <th>Header 03</th>
+                <th>Header 04</th>
+            </tr>
+            <tr>
+                <td name="coluna01">valor 01</td> 
+                <td name="coluna02">valor 02</td>
+                <td name="coluna03">valor 03</td>
+                <td name="coluna04">valor 04</td>
+            </tr>
+            <tr>
+                <td name="coluna01">valor 05</td> 
+                <td name="coluna02">valor 06</td>
+                <td name="coluna03">valor 07</td>
+                <td name="coluna04">valor 08</td>
+            </tr>
+            <tr>
+                <td name="coluna01">valor 09</td> 
+                <td name="coluna02">valor 10</td>
+                <td name="coluna03">valor 11</td>
+                <td name="coluna04">valor 12</td>
+            </tr>
+            <tr>
+                <td name="coluna01">valor 13</td> 
+                <td name="coluna02">valor 14</td>
+                <td name="coluna03">valor 15</td>
+                <td name="coluna04">valor 16</td>
+            </tr>
+        </table>
+        <div id="json-obj"></div>
+
+        <script src="bin/tableToJSON.min.js" type="text/javascript"></script>
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var data = tableToJSON("table");
+                $("#json-obj").html(JSON.stringify(data));
+            });
+        </script>            
+    </body>
+</html>

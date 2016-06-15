@@ -1,0 +1,17 @@
+{
+  "name": "tableToJSON",
+  "description": "This package will help you to transform table tabgs on Js Objects!",
+  "main": "",
+  "authors": [
+    "Leandro Franciscato"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/LeandroFranciscato/tableToJSON",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
