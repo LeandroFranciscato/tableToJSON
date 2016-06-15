@@ -68,7 +68,3 @@ The output should look like that:
 ## Authors
 
 * **Leandro Franciscato** - [Acess my git Page](https://github.com/LeandroFranciscato)
-
-## License
-
-This project is licensed under the MIT License.
