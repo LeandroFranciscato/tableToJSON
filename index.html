@@ -34,7 +34,7 @@
           <h2>
 <a id="tabletojson" class="anchor" href="#tabletojson" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>tableToJSON</h2>
 
-<p>This one is a simple JS script that will help you to transform <code>table</code> tag's on JSON objects.</p>
+<p>This one is a simple JS script that will help you to transform tables/lists/collections into JSON objects.</p>
 
 <h3>
 <a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dependencies</h3>
@@ -121,7 +121,7 @@
     &lt;/<span class="pl-ent">li</span>&gt;
 &lt;/<span class="pl-ent">ul</span>&gt;</pre></div>
 
-<p>And get yours <code>&lt;td&gt;</code> with this simple js:</p>
+<p>And get yours <code>itens</code> with this simple js:</p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> data <span class="pl-k">=</span> <span class="pl-en">tableToJSON</span>(<span class="pl-s"><span class="pl-pds">"</span>table<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>tr<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>td<span class="pl-pds">"</span></span>);
 <span class="pl-k">var</span> anotherData <span class="pl-k">=</span> <span class="pl-en">tableToJSON</span>(<span class="pl-s"><span class="pl-pds">"</span>ul<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>li<span class="pl-pds">"</span></span>,<span class="pl-s"><span class="pl-pds">"</span>div<span class="pl-pds">"</span></span>);</pre></div>
@@ -139,7 +139,7 @@
 <a id="known-issues" class="anchor" href="#known-issues" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>known issues</h3>
 
 <ul>
-<li>Always use the tag <code>name</code> in yours <code>&lt;td&gt;</code>.</li>
+<li>Always use the attribute <code>name</code> in yours <code>&lt;itens&gt;</code> any tags that they are.</li>
 </ul>
 
 <h3>
