@@ -1,6 +1,6 @@
 ## tableToJSON
 
-This one is a simple JS script that will help you to transform ````table```` tag's on JSON objects.
+This one is a simple JS script that will help you to transform tables/lists/collections into JSON objects.
 
 ### Dependencies
 
@@ -89,7 +89,7 @@ Or this ````Collection````;
 </ul>
 ````
 
-And get yours ````<td>```` with this simple js:
+And get yours ````itens```` with this simple js:
 ````js
 var data = tableToJSON("table","tr","td");
 var anotherData = tableToJSON("ul","li","div");
@@ -105,7 +105,7 @@ The output should look like that:
 ````
 ### known issues
 
-- Always use the tag ````name```` in yours ````<td>````.
+- Always use the attribute ````name```` in yours ````<itens>```` any tags that they are.
 
 ### Authors
 
