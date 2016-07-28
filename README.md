@@ -52,9 +52,47 @@ Consider this ````table````:
 </table>
 ````
 
+Or this ````Collection````;
+
+````html
+<ul>
+    <li>
+        <div>Header 01</div>
+        <div>Header 02</div>
+        <div>Header 03</div>
+        <div>Header 04</div>
+    </li>
+    <li>
+        <div name="coluna01">valor 01</div> 
+        <div name="coluna02">valor 02</div>
+        <div name="coluna03">valor 03</div>
+        <div name="coluna04">valor 04</div>
+    </li>
+    <li>
+        <div name="coluna01">valor 05</div> 
+        <div name="coluna02">valor 06</div>
+        <div name="coluna03">valor 07</div>
+        <div name="coluna04">valor 08</div>
+    </li>
+    <li>
+        <div name="coluna01">valor 09</div> 
+        <div name="coluna02">valor 10</div>
+        <div name="coluna03">valor 11</div>
+        <div name="coluna04">valor 12</div>
+    </li>
+    <li>
+        <div name="coluna01">valor 13</div> 
+        <div name="coluna02">valor 14</div>
+        <div name="coluna03">valor 15</div>
+        <div name="coluna04">valor 16</td>
+    </li>
+</ul>
+````
+
 And get yours ````<td>```` with this simple js:
 ````js
-var data = tableToJSON("table");
+var data = tableToJSON("table","tr","td");
+var anotherData = tableToJSON("ul","li","div");
 ````
 The output should look like that:
 ````js
@@ -68,8 +106,7 @@ The output should look like that:
 ### known issues
 
 - Always use the tag ````name```` in yours ````<td>````.
-- The Header ````<th>```` is not parsed to JSON.
 
 ### Authors
 
-* **Leandro Franciscato** - [Acess my git Page](https://github.com/LeandroFranciscato)
+* **Leandro Franciscato** - [Acess my GitHub Page](https://github.com/LeandroFranciscato)
